@@ -16,11 +16,11 @@
     --h3-font-size: 3rem;
     --h4-font-size: 2.5rem;
     --card-font-size: 1.125rem;
-    --darkest-color: #182139;
-    --dark-color: #4b85a8;
-    --light-color: #e1b200;
-    --lightest-color: #d98100;
-    --neutral-color: #aba597;
+    --darkest-color: #28465c;
+    --dark-color: #4b84ac;
+    --light-color: #6794b5;
+    --lightest-color: #b0c9db;
+    --neutral-color: #e1b18e;
 }
 
 
@@ -35,9 +35,9 @@ body{
     font-family: 'Roboto', sans-serif;
 }
 
-main, footer {
+/* main, footer {
     margin-top: 75px;
-}
+} */
 
 h1,h2,h3,h4 {
     line-height: 1.1;
@@ -60,6 +60,11 @@ h3 {
     font-size: var(--h3-font-size);
 }
 
+.no-border {
+    border-bottom: none;
+}
+
+/* 
 .bar {
     height: 5px;
     background-color: black;
@@ -70,9 +75,11 @@ h3 {
         margin-top: 0;
         margin-right: 75px;
     }
-}
+} */
+
+
 /* Navegation Bar */
-.side-bar{
+/* .side-bar{
     background-color: #333;
     position: fixed;
     top: 0;
@@ -92,9 +99,9 @@ h3 {
 #navbar a {
     color: var(--light-color);
     margin: 0 .75em;
-}
+} */
 
-@media screen and (min-width: 600px) {
+/* @media screen and (min-width: 600px) {
     .side-bar {
         width: 75px;
         height: 100%;
@@ -108,109 +115,84 @@ h3 {
     #navbar a {
         margin: .75em 0;
     }
-}
+} */
+
+
 /* Welcome Section */
 #welcome-section {
-    background-color: var(--dark-color);
+    background-color: var(--lightest-color);
     display: flex;
     align-items: center;
     justify-content: center;
     height: 100vh;
+    width: 100vw;
 }
-#welcome-section .bar {
+/*
+#welcome-section img {
+    width: 50%;
+    height: 50%;
+    border-radius: 50%;
+}
+ #welcome-section .bar {
     margin-left: 25%;
     width: 400px;
-}
+} */
 #welcome-section h3 {
     font-size: 2.75rem;
     font-family: 'Bad Script', sans-serif;
     text-align: center;
     margin-top: .5em;
+    margin-left: .5em;
 }
 
 /* Project Section */
 #projects {
-    background-color: var(--lightest-color);
+    background-color: var(--light-color);
     padding-top: 75px;
-    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100vw;
 }
 
 #projects h2 {
-    color: var(--darkest-color);
     text-align: center;
     margin-bottom: .5em;
 }
 
-
-/* Project Cards */
-.container-projects {
-    background-color: var(--darkest-color);
-    border-radius: .35rem;
-    margin: .5em 1em;
-    width: 300px;
-    height: 475px;
-    overflow: scroll;
-}
-.project-tile {
-    position: relative;
-    background-color: rgb(175, 175, 175);
-    border-radius: .5rem;
-    height: 400px;
-    width: 250px;
-    margin: 3em 1em;
-    padding: .5em;
-    justify-content: left;
+.project {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-bottom: solid black 2px;
+    width: 90vw;
+    padding: 1em 1em;
 }
 
-.project-tile h4 {
-    color: var(--darkest-color);
+.project h4 {
     font-size: var(--h4-font-size);
-}
-.project-tile .bar {
-    width: 100%;
-    height: 3px;
-    margin-left: 0;
-    margin-bottom: 1.5em;
-}
-.project-tile p {
-    color: #000;
-    font-size: var(--card-font-size);
+    margin: .5em 0;
 }
 
-.project-tile a {
-    color: var(--darkest-color);
-    font-size: 1.3rem;
-    position: absolute;
-    right: 1em;
-    bottom: 1em;
+.project img{
+    width: 80vw;
+    height: auto;
+    border-radius: 10px;
+    margin: 1em;
 }
+
+/* Individual Project  */
 
 @media screen and (min-width: 700px) {
-    .container-projects {
-        width: 600px;
-        height: 500px;
-        display: flex;
-        justify-content: center;
-        flex-direction: row;
-        flex-wrap: wrap;
 
-    }
 }
 @media screen and (min-width: 1000px) {
-    .container-projects {
-        width: 900px;
-        height: 700px;
-    }
+
 }
 
 @media screen and (min-width: 1550px) {
-    .container-projects {
-        width: 1450px;
-        height: 700px;
-    }
+
 }
 /* Contact Section */
 #contact-section {
@@ -245,7 +227,7 @@ footer {
 }
 
 footer span {
-    color: #555;
+    color: white;
     font-size: 1.3rem;
     position: absolute;
     right: 1em;
