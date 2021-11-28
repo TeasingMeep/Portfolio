@@ -185,14 +185,8 @@ h3 {
 /* Individual Project  */
 
 @media screen and (min-width: 700px) {
-
-}
-@media screen and (min-width: 1000px) {
-
-}
-
-@media screen and (min-width: 1550px) {
-
+    .project img {
+        width: 30vw;
 }
 /* Contact Section */
 #contact-section {
